@@ -1,23 +1,28 @@
 #include "libft.h"
 
-int l_isspace(int c)
+int l_isspace(int c, const char* charset)
 {
-    return (c == ' ') || (c == '\n') || (c == '\t');
+    while(*charset)
+    {
+        if (c == *charset)
+            return (1);
+    }
+    return (0);
 }
 
-char *ft_strtrim(char const *s)
+char *ft_strtrim(char const *s, const char* charset)
 {
     int i;
     int j;
 
     i = 0;
-    while(l_isspace(s[i]))
+    while(l_isspace(s[i], charset))
         i++;
     j = i;
     while(s[j])
         j++;
     j--;
-    while(l_isspace(s[j]))
+    while(l_isspace(s[j], charset))
         j--;
     return (ft_strsub(s, i, j - i + 1));
 }
