@@ -22,6 +22,8 @@ void	*calloc(size_t nmemb, size_t size)
 	if (nmemb && size)
 	{
 
+		if (nmemb > (__SIZE_MAX__ / size))
+			return (NULL);
 		ptr = malloc(nmemb * size);
 		if (!ptr)
 			return (NULL);
