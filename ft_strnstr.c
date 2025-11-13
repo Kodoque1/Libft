@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:05:58 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/13 15:13:32 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/13 17:04:02 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	i = 0;
 	j = 0;
-	while (big[i] != '\0' && i < len)
+	while (big[i] != '\0' && (i < len))
 	{
 		if (big[i] == little[j])
 		{

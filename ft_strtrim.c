@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:06:06 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/13 16:47:18 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/13 16:58:58 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	*ft_strtrim(char const *s, const char *charset)
 	int	j;
 
 	i = 0;
-
 	while (l_isspace(s[i], charset))
 		i++;
 	if (!s[i])
