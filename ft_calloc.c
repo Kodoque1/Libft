@@ -6,13 +6,13 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:02:53 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/13 11:06:44 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/13 13:44:55 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	int		len;
 	void	*ptr;

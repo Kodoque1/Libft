@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:57:26 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/13 09:58:38 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/13 14:09:38 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_isspace(char c)
 	return (((9 <= c) && (c <= 13)) || c == 32);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	nbr;

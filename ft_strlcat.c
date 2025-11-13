@@ -6,11 +6,21 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:05:33 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/13 11:15:14 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/13 13:44:03 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_strnlen(const char *str, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] && (i < n))
+		i++;
+	return (i);
+}
 
 int	ft_strlcat(char *dest, const char *src, size_t n)
 {
@@ -29,5 +39,5 @@ int	ft_strlcat(char *dest, const char *src, size_t n)
 		if ((len + i) < n)
 			dest[len + i] = '\0';
 	}
-	return (len + i);
+	return (len + ft_strlen(src));
 }

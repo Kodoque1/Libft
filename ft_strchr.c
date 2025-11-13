@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:05:09 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/10 12:05:10 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/13 16:51:38 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
+	if ((char) c == '\0')
+		return ((char *)(s + i));
 	else
 		return (NULL);
 }

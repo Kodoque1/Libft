@@ -1,44 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 12:06:06 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/13 16:47:18 by zaddi            ###   ########.fr       */
+/*   Created: 2025/11/10 11:12:52 by zaddi             #+#    #+#             */
+/*   Updated: 2025/11/13 16:37:10 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-static int	l_isspace(int c, const char *charset)
-{
-	while (*charset)
-	{
-		if (c == *charset)
-			return (1);
-		charset++;
-	}
-	return (0);
-}
-
-char	*ft_strtrim(char const *s, const char *charset)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-
-	while (l_isspace(s[i], charset))
+	while (lst)
+	{
 		i++;
-	if (!s[i])
-		return (ft_strdup(""));
-	j = i;
-	while (s[j])
-		j++;
-	j--;
-	while (l_isspace(s[j], charset))
-		j--;
-	return (ft_substr(s, i, j - i + 1));
+		lst = lst->next;
+	}
+	return (i);
 }

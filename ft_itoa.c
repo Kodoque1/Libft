@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:01:40 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/13 11:10:40 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/13 14:58:35 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ char	*ft_itoa(int n)
 
 	len = size_of_int(n);
 	l = n;
-	buf = (char *)malloc(sizeof(char) * (len + 1));
-	buf[len] = '\0';
+	buf = (char *) ft_calloc(len + 1, sizeof(char));
+	if (buf == NULL)
+		return (NULL);
 	start = 0;
 	if (l < 0)
 	{
