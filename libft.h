@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:56:04 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/14 14:09:57 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/18 23:16:21 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
+char			*ft_uitoa(unsigned int n);
 
 // File function
 void			ft_putchar_fd(char c, int fd);
