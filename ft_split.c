@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:04:58 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/15 14:33:12 by zaddi            ###   ########.fr       */
+/*   Updated: 2025/11/23 21:22:27 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static int	count_word(const char *str, char c)
 static void	position_in_string(const char *s, int *j, int *k, char c)
 {
 	while (s[*j] == c)
-			(*j)++;
-		*k = *j;
+		(*j)++;
+	*k = *j;
 	while (s[*k] && s[*k] != c)
 		(*k)++;
 }
