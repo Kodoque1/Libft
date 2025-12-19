@@ -6,6 +6,7 @@ RM := rm -f
 CC := cc
 AR = ar rcs
 CFLAGS := -Werror -Wextra -Wall
+CFLAGS += -Iincludes
 
 %.o : %.c
 	$(CC) -c $(CFLAGS) $< -o $@
