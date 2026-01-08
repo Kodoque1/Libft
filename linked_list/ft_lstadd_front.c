@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:02:26 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/10 13:43:56 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/08 11:57:36 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	new->next = *alst;
-	(*alst) = new;
+	if (new != *alst)
+	{
+		new->next = *alst;
+		(*alst) = new;
+	}
 }
