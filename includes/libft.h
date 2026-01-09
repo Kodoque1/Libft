@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:56:04 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/18 23:16:21 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/08 16:18:41 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,7 @@ void			ft_lstiter(t_list *lst, void (*f)(void *content));
 t_list			*ft_lstlast(t_list *lst);
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+t_list			*ft_lstcpy(t_list *lst);
+t_list			*ft_lstsort(t_list *lst);
 
 #endif

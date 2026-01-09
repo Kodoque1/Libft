@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstsort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 11:32:53 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/08 18:00:36 by zaddi            ###   ########.fr       */
+/*   Created: 2026/01/08 16:16:32 by zaddi             #+#    #+#             */
+/*   Updated: 2026/01/08 16:50:39 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	insert(t_list **lst, t_list *new, int (*cmp)(void *, void *))
 {
-	t_list	*back;
+	while (*lst && cmp(new->content, lst))
+		lst = &((*lst)->next);
+	ft_lstadd_front(lst, new);
+}
 
-	if (*lst == NULL)
-		*lst = new;
-	else
+t_list	*ft_lstsort(t_list **lst, int (*cmp)(void *, void *))
+{
+	t_list	*result;
+	t_list	*node;
+	t_list	*ptr;
+
+	ptr = *lst;
+	while (lst)
 	{
-		back = ft_lstlast(*lst);
-		if (back != new)
-		{
-			back->next = new;
-		}
+		node = ptr;
+		ptr = ptr->next;
+		node->next = NULL;
+		insert(result, node, cmp);
 	}
+	*lst = result;
 }

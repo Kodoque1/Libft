@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 11:32:53 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/08 18:00:36 by zaddi            ###   ########.fr       */
+/*   Created: 2026/01/08 16:07:45 by zaddi             #+#    #+#             */
+/*   Updated: 2026/01/08 16:34:37 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstcpy(t_list *lst)
 {
-	t_list	*back;
+	t_list	*result;
+	t_list	*node;
 
-	if (*lst == NULL)
-		*lst = new;
-	else
+	result = NULL;
+	while (lst)
 	{
-		back = ft_lstlast(*lst);
-		if (back != new)
+		node = ft_lstnew(lst->content);
+		if (!node)
 		{
-			back->next = new;
+			ft_lstclear(&result, ft_lstdelone);
+			return (NULL);
 		}
+		ft_lstadd_back(result, node);
+		lst = lst->next;
 	}
+	return (result);
 }
