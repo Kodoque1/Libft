@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:32:53 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/08 18:00:36 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/09 17:17:51 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		back = ft_lstlast(*lst);
 		if (back != new)
-		{
 			back->next = new;
-		}
 	}
 }
