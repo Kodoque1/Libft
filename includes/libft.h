@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:56:04 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/08 16:18:41 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/13 13:30:20 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 t_list			*ft_lstcpy(t_list *lst);
 t_list			*ft_lstsort(t_list *lst);
+
+//math
+unsigned int	ft_abs(int a);
 
 #endif
