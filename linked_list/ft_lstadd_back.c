@@ -6,13 +6,11 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:32:53 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/09 17:17:51 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/21 22:54:02 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
