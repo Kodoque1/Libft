@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 12:04:25 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/24 16:07:36 by zaddi            ###   ########.fr       */
+/*   Created: 2026/01/24 16:06:15 by zaddi             #+#    #+#             */
+/*   Updated: 2026/01/24 16:11:30 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_swap(void *left, void *right, size_t siz)
 {
-	size_t	i;
+	char	*buf;
 
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)s)[i] = (unsigned char)c;
-		i++;
-	}
-	return (s);
+	buf = malloc(siz * sizeof(char));
+	ft_memcpy(buf, left, siz);
+	ft_memcpy(left, right, siz);
+	ft_memcpy(right, buf, siz);
+	free(buf);
 }

@@ -6,13 +6,13 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:04:58 by zaddi             #+#    #+#             */
-/*   Updated: 2025/11/23 21:22:27 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/24 18:12:25 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_word(const char *str, char c)
+int	count_word(const char *str, char c)
 {
 	int	mode;
 	int	count;
