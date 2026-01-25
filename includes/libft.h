@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:56:04 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/24 18:13:08 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/25 10:47:50 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_uitoa(unsigned int n);
 int					count_word(const char *str, char c);
+void				free_array(char **strs);
 
 // File function
 void				ft_putchar_fd(char c, int fd);

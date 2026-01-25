@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:04:58 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/24 18:12:25 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/25 10:29:00 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	position_in_string(const char *s, int *j, int *k, char c)
 		(*k)++;
 }
 
-static void	free_array(char **strs)
+void	free_array(char **strs)
 {
 	int	i;
 
