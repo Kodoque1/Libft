@@ -6,7 +6,7 @@
 /*   By: zaddi <zaddi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:56:04 by zaddi             #+#    #+#             */
-/*   Updated: 2026/01/25 10:47:50 by zaddi            ###   ########.fr       */
+/*   Updated: 2026/01/25 11:12:01 by zaddi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int					ft_strlcat(char *dest, const char *src, size_t n);
 int					ft_strlen(const char *str);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strdup(const char *s);
+int					ft_strisnum(char *str);
 
 int					ft_atoi(const char *str);
 
@@ -93,5 +94,7 @@ t_list				*ft_lstsort(t_list *lst);
 
 // math
 unsigned int		ft_abs(int a);
+int					ft_max(int a, int b);
+int					ft_min(int a, int b);
 
 #endif
